@@ -180,11 +180,11 @@ def call_gemini(section: str, topic: str) -> dict:
         dict 包含 "question", "hint", "solution" 三個鍵。
     """
     model = genai.GenerativeModel(
-        model_name="gemini-pro",
+        model_name="gemini-1.5-flash",  # 請務必用這個名稱
         system_instruction=SYSTEM_PROMPT,
         generation_config=genai.GenerationConfig(
             temperature=0.9,
-            response_mime_type="application/json",   # 強制 JSON 輸出
+            response_mime_type="application/json",
         ),
     )
 
@@ -349,3 +349,4 @@ else:
         unsafe_allow_html=True,
 
     )
+
