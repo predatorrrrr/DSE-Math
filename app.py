@@ -180,7 +180,7 @@ def call_gemini(section: str, topic: str) -> dict:
         dict 包含 "question", "hint", "solution" 三個鍵。
     """
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash",
+        model_name="gemini-1.5-flash",
         system_instruction=SYSTEM_PROMPT,
         generation_config=genai.GenerationConfig(
             temperature=0.9,
